@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 4.1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="/src/components/boton-primario.js"></script>
+    <script type="module" src="/src/components/boton-secundario.js"></script>
+    <script type="module" src="/src/components/campo-texto.js"></script>
+    <script type="module" src="/src/components/boton-enlace.js"></script>
+    <script type="module" src="/src/components/etiqueta-texto.js"></script>
+    <script type="module" src="/src/components/app-header.js"></script>
+    <script
+      type="module"
+      src="/src/components/recomendacion-positiva.js"
+    ></script>
+    <script
+      type="module"
+      src="/src/components/recomendacion-negativa.js"
+    ></script>
+    <script type="module" src="/src/components/avatar-circular.js"></script>
+    <script type="module" src="/src/components/card-info-tutor.js"></script>
+  </head>
+  <body>
+    <header>
+      <app-header
+        logo="/src/assets/logos.png"
+        title="Tutorías UASLP"
+      ></app-header>
+    </header>
+
+    <main>
+      <div id="general-container">
+        <card-info-tutor
+          avatar_content="AG"
+          teacher_name="Juan Pérez"
+          session_info="Estructuras de Datos I ● 19 Sep 2025"
+        ></card-info-tutor>
+
+        <hr />
+
+        <div class="section-container">
+          <etiqueta-texto
+            ><b>1. ¿Qué tan satisfecho estás con la sesión?</b></etiqueta-texto
+          >
+          <div id="satisfaccion-container">
+            <boton-enlace>Muy<br />insatisfecho</boton-enlace>
+            <boton-enlace>Neutral</boton-enlace>
+            <boton-enlace>Satisfecho</boton-enlace>
+            <boton-enlace>Muy<br />satisfecho</boton-enlace>
+          </div>
+        </div>
+
+        <div class="section-container">
+          <etiqueta-texto><b>2. Califica a tu Tutor</b></etiqueta-texto>
+          <div id="calificacion-container">
+            <!-- Este elemento "rating" no está diseñado como componente en el proyecto de Figma. -->
+            <etiqueta-texto size="grande">
+               <span style="color: var(--texto-yellow-100);">★★★★</span><span style="color: var(--texto-black-60);">☆</span>
+            </etiqueta-texto>
+            <etiqueta-texto size="chico">4 de 5 estrellas</etiqueta-texto>
+          </div>
+        </div>
+
+        <div class="section-container">
+          <etiqueta-texto><b>3. Comparte tu experiencia</b></etiqueta-texto>
+          <campo-texto placeholder="¿Qué fue lo que mas te gustó de la sesión? ¿Hay algo que podríamos mejorar?"></campo-texto>
+        </div>
+
+        <div class="section-container">
+          <etiqueta-texto
+            ><b
+              >4. ¿Recomendarías este tutor a otros estudiantes?</b
+            ></etiqueta-texto
+          >
+          <div id="recomendacion-container">
+            <recomendacion-positiva name="Ana María"></recomendacion-positiva>
+            <recomendacion-negativa></recomendacion-negativa>
+          </div>
+        </div>
+
+        <div id="botones-container">
+          <boton-secundario>CANCELAR</boton-secundario>
+          <boton-primario>ENVIAR</boton-primario>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
